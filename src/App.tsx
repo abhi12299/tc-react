@@ -1,27 +1,15 @@
-import './App.css'
-import { useGetUsers } from './hooks/useGetUsers'
+import Header from './components/Header'
+import SearchBar from './components/SearchBar'
+import UsersList from './components/UsersList'
 
 function App() {
-  const { data, isLoading, isError } = useGetUsers()
-
-  let content: JSX.Element | null
-
-  if (isLoading) {
-    content = <div>Loading...</div>
-  } else if (isError && !data) {
-    content = <div>Something went wrong!</div>
-  } else {
-    content = <div>
-      got users!
-    </div>
-  }
-
   return (
-    <div className="App">
-      <div>
-        Contacts
-      </div>
-      {content}
+    <div>
+      <Header />
+      <main className='mt-2'>
+        <SearchBar />
+        <UsersList />
+      </main>
     </div>
   )
 }
