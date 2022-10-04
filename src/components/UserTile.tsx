@@ -25,7 +25,8 @@ const UserTile: React.FC<{ user: ExtendedUser; }> = ({ user }) => {
           className="h-4 w-4 mr-2"
           type="checkbox"
           checked={user.checked}
-          onChange={e => { }}
+          // no need to set onChange here since we have set onClick on list item
+          onChange={_ => { }}
         />
       </div>
     </li>
