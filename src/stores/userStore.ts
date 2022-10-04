@@ -1,4 +1,4 @@
-import { action, createStore, createTypedHooks, computed } from "easy-peasy";
+import { action, createStore, createTypedHooks } from "easy-peasy";
 import { UserStoreModel } from "../types";
 
 const store = createStore<UserStoreModel>({
